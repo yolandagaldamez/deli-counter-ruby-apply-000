@@ -12,18 +12,16 @@ def line(deli)
   end
 end
 
-def take_a_number(deli, new_customer, counter)
-  counter += 1
+def take_a_number(deli, new_customer)
   deli << new_customer
-  puts "Welcome, #{counter}. You are number #{deli.length} in line."
+  puts "Welcome, #{new_customer}. You are number #{deli.length} in line."
 end
 
-def now_serving(deli, counter)
+def now_serving(deli)
   if deli.length == 0
     puts "There is nobody waiting to be served!"
   else
-    counter 
-    puts "Currently serving #{counter}."
+    first_person = deli.shift
+    puts "Currently serving #{first_person}."
   end
 end
-
